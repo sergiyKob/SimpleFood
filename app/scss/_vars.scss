@@ -1,0 +1,50 @@
+
+$dark: #31352B;
+$darkBlue: #363853;
+$orange: #FF6838;
+$orangeLight: rgba(255, 122, 80, 0.1);
+$orangeBorder: rgba(255, 104, 56, 0.7);
+$white: #FFFFFF;
+$silver: #ECECEC;
+
+$transition: all 0.3s;
+
+$title: 37px;
+$price: 15px;
+
+
+
+
+
+
+
+
+
+
+
+%rubik-400 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+// %rubik-500 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 500;
+// }
+
+%rubik-600 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+}
+
+
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+%rubik-300i {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
