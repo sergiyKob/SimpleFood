@@ -8,6 +8,11 @@ $(function () {
   });
 
 
+  $('.reviews__inner').slick({
+    dots: true,
+    arrows: true,
+    fade: true,
+  });
 
   var mixer = mixitup('.categories__box-card');
 

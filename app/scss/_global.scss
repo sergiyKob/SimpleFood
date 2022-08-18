@@ -26,21 +26,39 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  padding-bottom: 120px;
 }
 
 .title {
-  @extend %rubik-600;
+  @extend %rubik-500;
   color: $darkBlue;
   font-size: $title;
-  margin-bottom: 55px;
 }
 
 .btn {
   color: $white;
   background-color: $orange;
+  padding: 12px 32px;
   border-radius: 5px;
   transition: $transition;
+
+  &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $orange;
+      box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2),
+        0px 0px 0px 2px $orangeBorder;
+    }
+  
+    &:focus {
+      background-color: $orangeLight;
+      color: $orange;
+      box-shadow: 0px 0px 0px 2px $orangeBorder;
+    }
+  
+    &:active {
+      background-color: $orangeLight;
+      color: $orange;
+    }
 }
 
 .card {
@@ -80,30 +98,83 @@ body {
   }
 
   &__btn {
-    background-color: $orange;
-    color: $white;
     font-size: 14px;
-    border-radius: 5px;
     padding: 7px 16px;
     max-width: 110px;
     margin: 0 auto;
-    transition: $transition;
+  }
+
+}
+
+
+.rest-card {
+  max-width: 370px;
+  height: 419px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0px 3px 15px rgba(255, 104, 56, 0.5);
+  }
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 0 20px 20px 20px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  &__hours {
+    @extend %rubik-300;
+  }
+
+  &__time {
+    width: 19px;
+    height: 20px;
+    margin-right: 12px;
+  }
+
+  &__link {
+    padding: 5px 32px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+
     &:hover {
-      background-color: $white;
-      color: $orange;
-      box-shadow: 0px 0px 0px 2px $orangeBorder;
+      .rest-card__arrow {
+        fill: $orange;
+        transform: translateX(15px);
+      }
     }
 
     &:focus {
-      background-color: $orangeLight;
-      color: $orange;
-      box-shadow: 0px 0px 0px 2px $orangeBorder;
+      .rest-card__arrow {
+          fill: $orange;
+        }
     }
 
     &:active {
-      background-color: $orangeLight;
-      color: $orange;
-    }
+      .rest-card__arrow {
+      fill: $orange;
+   }
+ }
+      
+
+    
   }
 
+  &__arrow {
+    width: 14px;
+    height: 12px;
+    fill: $white;
+  }
 }
