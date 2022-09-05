@@ -1,0 +1,71 @@
+
+.reviews {
+  position: relative;
+  padding-bottom: 200px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__slider {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  &__item-inner {
+    display: flex;
+    align-items: center;
+    max-width: 950px;
+  }
+
+  &__img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding-left: 1px;
+    margin-right: 80px;
+  }
+
+  &__content {
+    max-width: 60%;
+  }
+  &__blockquote {
+    @extend %rubik-400i;
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+
+    &::before {
+      @extend %absolut;
+      background-image: url("../images/icons/icon1.svg");
+      width: 24px;
+      height: 19px;
+      top: 0;
+      left: -39px;
+    }
+
+    &::after {
+      @extend %absolut;
+      background-image: url("../images/icons/icon2.svg");
+      width: 24px;
+      height: 19px;
+      bottom: -2px;
+      right: -38px;
+    }
+  }
+
+  &__author {
+    @extend %rubik-500;
+    color: $orange;
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

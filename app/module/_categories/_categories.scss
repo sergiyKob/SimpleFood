@@ -1,0 +1,87 @@
+.categories {
+  &__title {
+    text-align: center;
+    margin: -11px 0 60px 8px;
+  }
+
+  &__filter {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__box:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  &__btn {
+    height: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: $darkBlue;
+    background-color: $white;
+    box-shadow: 0px 0px 0px 1px #ececec;
+
+    &:hover {
+      color: $orange;
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+
+      .categories__icon {
+        fill: $orange;
+      }
+    }
+
+    &:focus {
+      background-color: $white;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      background-color: $white;
+      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+    }
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    fill: $darkBlue;
+    margin-right: 10px;
+    transition: $transition;
+  }
+
+  &__box-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 58px;
+  }
+
+  &__link {
+    @extend %h-f-a-link;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 133px;
+    color: $darkBlue;
+    text-decoration-line: underline;
+    transition: $transition;
+  }
+  &__btn--active {
+    background-color: $orange;
+    color: $white;
+    .categories__icon {
+      fill: $white;
+    }
+  }
+  .mixitup-control-active {
+    background-color: $orange;
+    color: $white;
+    .categories__icon {
+      fill: $white;
+    }
+  }
+}

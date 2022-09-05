@@ -1,0 +1,118 @@
+  .menu {
+  display: flex;
+  align-items: center;
+  padding: 59px 0;
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+    margin-right: 51px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    line-height: 1.2;
+    transition: $transition;
+    &:hover {
+      color: $orange;
+    }
+    &:focus {
+      border-radius: 5px;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+
+  &__link--active {
+    color: $orange;
+  }
+}
+
+.logo {
+  display: block;
+  transition: $transition;
+
+  &__img {
+    margin-left: 6px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.user-nav {
+  display: flex;
+  margin-right: 0px;
+
+  &__item:not(:last-child) {
+    margin-right: 9px;
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    stroke: $darkBlue;
+    padding: 11px;
+    border-radius: 5px;
+    transition: $transition;
+    position: relative;
+
+    &:hover {
+      background-color: $orange;
+
+      .user-nav__icon {
+        stroke: $white;
+      }
+
+      .user-nav__num {
+        background-color: $white;
+        color: $orange;
+      }
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+      background-color: rgba(255, 122, 80, 0.1);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: transparent;
+    stroke-width: 1.5;
+  }
+
+  &__num {
+    background-color: $orange;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    color: $white;
+    font-size: 10px;
+    line-height: 1.4;
+    top: 7px;
+    right: 4px;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+}

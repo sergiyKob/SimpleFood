@@ -1,0 +1,26 @@
+.promo {
+  &__titile {
+    margin-bottom: 60px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 370px;
+    background-color: $white;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    padding: 15px 20px;
+  }
+}

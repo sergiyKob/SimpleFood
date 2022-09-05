@@ -1,0 +1,26 @@
+.interesting {
+  position: relative;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__slider-list {
+    height: 315px;
+  }
+  &__slider-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 7px 5px 0 5px;
+  }
+  &__slick-prev {
+    position: absolute;
+    top: -105px;
+    right: 62px;
+  }
+
+  &__slick-next {
+    position: absolute;
+    top: -105px;
+    right: 2px;
+  }
+}

@@ -10,32 +10,32 @@ $transition: all 0.3s;
 $title: 36px;
 $price: 15px;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 %rubik-400 {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
-
 %rubik-400i {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
-
 %rubik-500 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
-
 %rubik-600 {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
 }
-
 %rubik-300 {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
-
 %rubik-300i {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
