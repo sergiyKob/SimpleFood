@@ -14,15 +14,16 @@
 @import "../module/_catalog/_catalog";
 @import "../module/_promo/_promo";
 @import "../module/_interesting/_interesting";
-@import "../module/_popup/_popup";
 @import "../module/_breadcrumbs/_breadcrumbs";
 @import "../module/_product/_product";
 
 
 
-// .main {
-//   min-height: calc(100vh - 474px);
-// }
+
+
+.main {
+  padding-top: 159px;
+}
 
 // -----------------Слайдер reviews---------------//
 

@@ -3,8 +3,17 @@ $(function () {
 
 
 
+//-------------fixed header---------------------------------------------//
 
 
+  $(window).scroll(function () {
+    var menu = $('.menu');
+    if ($(this).scrollTop() > 1) {
+      menu.addClass('menu_fixed');
+    } else {
+      menu.removeClass('menu_fixed');
+    }
+  });
 
 
 //----------------------------------------------------------------------//

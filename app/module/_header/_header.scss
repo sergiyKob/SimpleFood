@@ -1,7 +1,16 @@
   .menu {
+  position: fixed;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 59px 0;
+  z-index: 500;
+  max-width: 1170px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 0.3s;
 
   &__list {
     display: flex;
@@ -31,6 +40,18 @@
   &__link--active {
     color: $orange;
   }
+}
+
+.menu_fixed::after {
+  content: '';
+  position: fixed;
+  background-color: #F9FAFF;
+  box-shadow: 0 0 4px rgb(0 0 0 / 8%);
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 159px;
+  z-index: -1;
 }
 
 .logo {
