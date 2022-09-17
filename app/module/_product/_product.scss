@@ -191,7 +191,9 @@
     border-radius: 15px;
     position: relative;
     @include lg(992) {
-    min-height: 80%;
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
     }
   }
 
@@ -208,7 +210,7 @@
     width: 44px;
     height: 44px;
     border-radius: 5px;
-    background-color: #FFF2ED;
+    background-color: #fff2ed;
     transition: $transition;
   }
 
@@ -218,19 +220,19 @@
     fill: rgba(0, 0, 0, 0.15);
     @include lg(922) {
       width: 22px;
-    height: 22px;
+      height: 22px;
     }
   }
 
   &__slider {
     max-width: 750px;
-    @include md(768){
+    @include md(768) {
       max-width: 550px;
     }
     @include sm(576) {
       max-width: 355px;
     }
-     @include lg-h(992) {
+    @include lg-h(992) {
       max-width: 355px;
     }
   }
@@ -245,11 +247,11 @@
       max-width: 500px;
       max-height: 500px;
     }
-     @include sm(576) {
+    @include sm(576) {
       max-width: 360px;
       max-height: 360px;
     }
-      @include lg-h(992) {
+    @include lg-h(992) {
       max-width: 360px;
       max-height: 360px;
     }
@@ -423,14 +425,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-     @include sm(576) {
+    @include sm(576) {
       display: block;
     }
   }
   &__header-inner {
     display: flex;
     align-items: center;
-     @include sm(576) {
+    @include sm(576) {
       margin-bottom: 15px;
     }
   }

@@ -45,7 +45,6 @@
         transition: opacity 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       }
     }
-
   }
   @include sm(576) {
     padding: 15px 10px;
@@ -160,13 +159,14 @@
 .logo {
   display: block;
   transition: $transition;
-  @include sm(576) {
-    width: 115px;
-  }
   &__img {
     margin-left: 6px;
     @include md(768) {
       margin-left: 0;
+    }
+    @include sm(576) {
+      width: 115px;
+      height: 23px;
     }
   }
 
@@ -248,24 +248,22 @@
   border-radius: 5px;
   width: 44px;
   height: 44px;
-  &.active {
-    @include md(768) {
-      top: 2.5%;
-      left: 90%;
-      background-color: #faeded;
-      display: block;
-      z-index: 100;
-      &:focus {
-        box-shadow: 0px 0px 0px 2px $darkBlue;
-      }
-      &:active {
-        background-color: $gray;
-      }
-    }
-    @include sm(576) {
-      left: 80%;
-    }
+  top: 2.5%;
+  left: 90%;
+  background-color: #faeded;
+  z-index: 100;
+  
+  &:active {
+    background-color: $gray;
   }
+
+  @include md(768) {
+    display: block;
+  }
+  @include sm(576) {
+    left: 80%;
+  }
+
   &__icon {
     width: 18px;
     height: 18px;
@@ -281,7 +279,7 @@
   display: none;
   @include md(768) {
     display: block;
-    z-index: 90;
+    position: fixed;
     margin-top: 10px;
     padding: 14px 15px;
     border-top: 1px solid #eeeff3;

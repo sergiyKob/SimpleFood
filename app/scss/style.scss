@@ -281,54 +281,6 @@
 
 
 
-//----------------------Фільтр Предложения------------------//
-
-.filter-offer {
-  &__form {
-    padding: 0 15px 25px 0;
-  }
-  &__label {
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    padding-left: 52px;
-    transition: all 0.02s;
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: 14px;
-    }
-    &:hover {
-      color: $orange;
-      .filter-offer__checkbox {
-        border: 1px solid $orange;
-      }
-    }
-    &:focus {
-      .filter-offer__checkbox {
-        border: 1px solid $orange;
-      }
-    }
-  }
-  &__input {
-    @extend %checkbox-hidden;
-    &:checked + .filter-offer__checkbox {
-      background-image: url("../images/icons/checked-on.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 1px solid $darkBlue;
-    }
-  }
-  &__checkbox {
-    width: 24px;
-    height: 24px;
-    background-color: #faeded;
-    border: 1px solid $silver;
-    border-radius: 3px;
-    position: absolute;
-    margin-top: -2px;
-    margin-left: -35px;
-  }
-}
 
 //----------------------Стрілки слайдера товару-----------------//
 .slick-product__prev,

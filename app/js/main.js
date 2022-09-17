@@ -18,7 +18,7 @@ $(function () {
 
   //-----------------------------------------------------------------------//
 
-  $('.filters-mobile').on('click', function () {
+  $('.filters-mobile-btn').on('click', function () {
     $('.filter, .menu').addClass('active');
     $('body').addClass('lock');
   });
@@ -55,15 +55,20 @@ $(function () {
 
 
   $('.burger').on('click', function () {
-    $('.burger, .menu, .menu__list, .burger-close').addClass('active');
+    $('.burger, .menu, .menu__list').addClass('active');
     $('body').addClass('lock');
   });
 
   $('.menu__list a, .burger-close').on('click', function () {
-    $('.burger, .menu, .menu__list, .burger-close').removeClass('active');
+    $('.burger, .menu, .menu__list').removeClass('active');
     $('body').removeClass('lock');
   }); 
 
+//----------були проблеми з переходом по ссилкам в меню !!! все ОК))-------------------//
+
+  $('.menu__list a').on('click', function () {
+    window.location = $(this).attr('href');
+  });
 
 //-------------fixed header---------------------------------------------//
 

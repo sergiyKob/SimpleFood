@@ -1,5 +1,4 @@
 .catalog {
-  
   &__header {
     display: flex;
     justify-content: space-between;
@@ -15,7 +14,6 @@
   }
   &__header-inner {
     display: flex;
-   
   }
   &__title {
     margin-bottom: 20px;
@@ -48,7 +46,7 @@
     @include sm(576) {
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: 30px;
-  }
+    }
   }
 }
 
@@ -57,14 +55,19 @@
 .filter-category {
   &__form {
     padding: 0 15px 25px 15px;
+    @include md(768) {
+      padding: 0 5px 10px 15px;
+    }
   }
 
   &__label {
     display: block;
     &:not(:last-child) {
       margin-bottom: 11px;
+      @include md(768) {
+        margin-bottom: 0;
+      }
     }
-   
   }
   &__input {
     @extend %checkbox-hidden;
@@ -88,10 +91,76 @@
     &:active {
       text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
     }
+    @include md(768) {
+      display: block;
+      padding: 11px 0;
+    }
   }
 }
 
-.filters-mobile {
+//----------------------Фільтр Предложения------------------//
+
+.filter-offer {
+  &__form {
+    padding: 0 15px 25px 0;
+    @include md(768) {
+      padding: 0 5px 10px 0;
+    }
+  }
+  &__label {
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    padding-left: 52px;
+    transition: all 0.02s;
+    display: block;
+    @include md(768) {
+      padding: 12px 52px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 14px;
+      @include md(768) {
+        margin-bottom: 0;
+      }
+    }
+    &:hover {
+      color: $orange;
+      .filter-offer__checkbox {
+        border: 1px solid $orange;
+      }
+    }
+    &:focus {
+      .filter-offer__checkbox {
+        border: 1px solid $orange;
+      }
+    }
+  }
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-offer__checkbox {
+      background-image: url("../images/icons/checked-on.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid $darkBlue;
+    }
+  }
+  &__checkbox {
+    width: 24px;
+    height: 24px;
+    background-color: #faeded;
+    border: 1px solid $silver;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: -2px;
+    margin-left: -35px;
+    @include md(768) {
+      display: block;
+      padding: 11px 0;
+    }
+  }
+}
+
+.filters-mobile-btn {
   @extend %center;
   width: 47px;
   height: 47px;
@@ -120,10 +189,8 @@
 .pagination {
   display: flex;
   justify-content: center;
-  @include md (768) {
- 
+  @include md(768) {
   }
-
 
   &__arrows {
     display: flex;
