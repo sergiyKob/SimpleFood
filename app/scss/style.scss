@@ -21,9 +21,9 @@
 
 
 
-.main {
-  padding-top: 159px;
-}
+
+
+
 
 // -----------------Слайдер reviews---------------//
 
@@ -32,8 +32,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 113%;
-  left: 45%;
 
   li {
     margin-right: 15px;
@@ -76,6 +74,7 @@
   border: 3px solid $gray;
   border-radius: 50%;
   transition: $transition;
+  z-index: 2;
 
   &:hover {
     background-color: #fff2ed;
@@ -123,12 +122,36 @@
   position: absolute;
   top: 112%;
   left: 39%;
+
+      @include xl(1200) {
+    top: 105%;
+  }
+    @include lg(992) {
+    top: 50%;
+    left: 6%;
+  }
+  @include sm(576) {
+    top: 30px;
+    left: 14%;
+  }
 }
 
 .slick-next {
   position: absolute;
   top: 112%;
   left: 57.5%;
+
+      @include xl(1200) {
+    top: 105%;
+  }
+    @include lg(992) {
+    top: 50%;
+    left: 89%;
+  }
+    @include sm(576) {
+    top: 30px;
+    left: 77%;
+  }
 }
 
 .slick-btn--active {
@@ -141,6 +164,15 @@
 
 //----------------selectbox-- фільтр по назві і кількості---------//
 
+.jq-selectbox {
+    z-index: 3;
+}
+
+.jq-selectbox select,.jq-select-multiple select {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .jq-selectbox__select {
   height: 47px;
   padding: 14px 40px 0 16px;
@@ -150,7 +182,6 @@
   background: $white;
   line-height: 1.2;
   font-size: 14px;
-  margin-left: 15px;
   transition: $transition;
   &:hover {
     background: transparent;
@@ -163,6 +194,9 @@
   }
   &:focus {
     border: 1px solid $orange;
+  }
+  @include sm(576) {
+    padding: 14px 30px 0 5px;
   }
 }
 
@@ -209,10 +243,16 @@
   -webkit-box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
   box-shadow: 0 2px 10pxrgba (0, 0, 0, 0.2);
   font: none;
+  @include sm(576) {
+  width: 105%;
+  }
 }
 
 .jq-selectbox li {
   color: $dark;
+  @include sm(576) {
+    padding: 13px 4px;
+  }
 }
 
 .jq-selectbox li.selected {
@@ -239,43 +279,7 @@
   border: 1px solid $orange;
 }
 
-//--------------------Фільтр Категорії------------------//
 
-.filter-category {
-  &__form {
-    padding: 0 15px 25px 15px;
-  }
-
-  &__label {
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: 11px;
-    }
-  }
-  &__input {
-    @extend %checkbox-hidden;
-    &:checked + .filter-category__checkbox {
-      color: $orange;
-    }
-  }
-  &__checkbox {
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-      color: $orange;
-    }
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.0001);
-      box-shadow: 0px 0px 0px 2px #ffa285;
-      border-radius: 3px;
-    }
-    &:active {
-      text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
-    }
-  }
-}
 
 //----------------------Фільтр Предложения------------------//
 
@@ -334,8 +338,8 @@
   top: 50%;
   left: 7.5%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 5px;
   transition: $transition;
   &:hover {
@@ -353,9 +357,13 @@
     background: #faeded;
     box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
   }
+  @include sm(576) {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .slick-product__next {
-  left: 89.5%;
+  left: 87.5%;
 }
 
 .slick-product__icon {
@@ -365,11 +373,7 @@
   transition: $transition;
 }
 
-//---------------------slick-dots popup---------------//
 
-.popup__slick-dots {
-  top: 90%;
-}
 
 //----------------------Поле кількість товару----------------//
 
@@ -491,6 +495,15 @@
 //--------------star--------------------//
 .jq-ry-container {
   padding: 0;
+}
+
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-rated-group {
+  z-index: 0;
+}
+
+.jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group.jq-ry-normal-group {
+  z-index: 0;
+
 }
 
 

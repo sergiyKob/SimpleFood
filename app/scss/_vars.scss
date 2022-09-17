@@ -14,6 +14,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+$xxl: 1800px;
 
 %rubik-400 {
   font-family: "Rubik", sans-serif;
@@ -57,7 +58,7 @@ $xl: 1200px;
   }
   &:focus {
     background: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 0px 0px 2px $orangeBorder;
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
   &:active {

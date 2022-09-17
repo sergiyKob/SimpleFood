@@ -1,9 +1,25 @@
 .breadcrumbs {
   background-color: rgba(255, 122, 80, 0.1);
   margin: 159px 0 60px 0;
+  @include xl(1200) {
+      margin: 120px 0 60px 0;
+    }
+      @include xl-h(1200) {
+      margin: 72px 0 60px 0;
+    }
+    @include md(768) {
+      margin: 86px 0 40px 0;
+    }
+    @include sm(576) {
+      margin: 72px 0 30px 0;
+    }
 
   &__list {
     display: flex;
+    @include sm(576) {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
   }
 
   &__item {

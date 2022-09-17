@@ -11,6 +11,7 @@
 </head>
 
 <body id="body">
+
   <header class="header">
     <div class="container">
       <nav class="menu">
@@ -18,6 +19,9 @@
           <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип SimpleFood">
         </a>
         <ul class="menu__list">
+          <a class="logo logo-burger" href="#body">
+            <img class="logo__img" src="images/logo.svg" width="200" height="39" alt="логотип SimpleFood">
+          </a>
           <li class="menu__item">
             <a class="menu__link menu__link--active" href="#body">
               Главная
@@ -33,7 +37,70 @@
               Контакты
             </a>
           </li>
+          <button class="burger-close ">
+            <svg class="burger-close__icon">
+              <use xlink:href="images/sprite.svg#icon-close2"></use>
+            </svg>
+          </button>
+          <address class="contacts contacts-burger">
+            <ul class="contacts__list contacts-burger__list">
+              <li class="contacts__item contacts-burger__item">
+                <a class="contacts__link contacts-burger__link" target="_blank"
+                  href="https://g.page/rola_food_factory?share">
+                  <svg class="contacts__icon">
+                    <use xlink:href="images/sprite.svg#location"></use>
+                  </svg>
+                  ул. Смирнова 2/3
+                </a>
+              </li>
+              <li class="contacts__item contacts-burger__item">
+                <a class="contacts__link contacts-burger__link" href="tel:79068057043">
+                  <svg class="contacts__icon">
+                    <use xlink:href="images/sprite.svg#calling"></use>
+                  </svg>
+                  79068057043
+                </a>
+              </li>
+              <li class="contacts__item contacts-burger__item">
+                <a class="contacts__link contacts-burger__link" href="mailto:support@sfood.com">
+                  <svg class="contacts__icon">
+                    <use xlink:href="images/sprite.svg#message"></use>
+                  </svg>
+                  support@sfood.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social social-burger">
+              <li class="social__item social-burger__item">
+                <a class="social__link social-burger__link" target="_blank" href="https://www.facebook.com/">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg>
+                  <span class="sr-only">Ссылка на фейсбук Simple Food</span>
+                </a>
+              </li>
+              <li class="social__item social-burger__item">
+                <a class="social__link social-burger__link" target="_blank" href="https://twitter.com/">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                  <span class="sr-only">Ссылка на твиттер Simple Food</span>
+                </a>
+              </li>
+              <li class="social__item social-burger__item">
+                <a class="social__link social-burger__link" target="_blank" href="https://www.instagram.com/">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
+                  <span class="sr-only">Ссылка на инстаграмм Simple Food</span>
+                </a>
+              </li>
+            </ul>
+          </address>
         </ul>
+
+
+
         <ul class="user-nav">
           <li class="user-nav__item">
             <button class="user-nav__btn" type="button">
@@ -53,764 +120,934 @@
             </button>
           </li>
         </ul>
+        <button class="burger" type="button">
+          <span class="burger__line"></span>
+          <span class="sr-only">Мобильное меню</span>
+        </button>
       </nav>
     </div>
   </header>
-  <main class="main">
-    <section class="hero section" style="background-image: url('images/scooter-guy.png')">
-      <div class="container">
-        <div class="hero__info">
-          <h1 class="hero__title">
-            Доставка
-            <span class="hero__subtitle">за 15 минут</span>
-          </h1>
-          <div class="hero__text">
-            <p>
-              Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-            </p>
+
+  <div class="wrapper">
+    <main class="main">
+      <section class="hero section">
+        <div class="container">
+          <div class="hero__inner" style="background-image: url('images/scooter-guy.png')" width="560" height="660">
+            <div class="hero__info">
+              <h1 class="hero__title">
+                Доставка<br>
+                <span class="hero__subtitle">за 15 минут</span>
+              </h1>
+              <div class="hero__text">
+                <p>
+                  Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+                </p>
+              </div>
+              <div class="hero__box-link">
+                <a class="hero__link btn" href="#">Заказать</a>
+                <a class="hero__more" href="#">Подробнее</a>
+              </div>
+            </div>
           </div>
-          <a class="hero__link btn" href="http://localhost:3000/catalog.html">Заказать</a>
-          <a class="hero__more" href="#">Подробнее</a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="categories section" id="categories">
-      <div class="container">
-        <h2 class="categories__title title">
-          Популярные категории
-        </h2>
-        <ul class="categories__filter">
-          <li class="categories__box">
-            <button class="categories__btn categories__btn--active btn" data-filter=".category-a" type="button">
-              <svg class="categories__icon">
-                <use xlink:href="images/sprite.svg#burger"></use>
-              </svg>
-              Бургеры
-            </button>
-          </li>
-          <li class="categories__box">
-            <button class="categories__btn btn" data-filter=".category-b" type="button">
-              <svg class="categories__icon">
-                <use xlink:href="images/sprite.svg#pizza"></use>
-              </svg>
-              Пицца
-            </button>
-          </li>
-          <li class="categories__box">
-            <button class="categories__btn btn" data-filter=".category-c" type="button">
-              <svg class="categories__icon">
-                <use xlink:href="images/sprite.svg#sandwich"></use>
-              </svg>
-              Сендвичи
-            </button>
-          </li>
-          <li class="categories__box">
-            <button class="categories__btn btn" data-filter=".category-d" type="button">
-              <svg class="categories__icon">
-                <use xlink:href="images/sprite.svg#asia"></use>
-              </svg>
-              Азиатская кухня
-            </button>
-          </li>
-          <li class="categories__box">
-            <button class="categories__btn btn" data-filter=".category-e" type="button">
-              <svg class="categories__icon">
-                <use xlink:href="images/sprite.svg#dish"></use>
-              </svg>
-              Cеты
-            </button>
-          </li>
-        </ul>
-        <ul class="categories__box-card">
-          <li class="categories__card mix category-a">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger1.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Чизбургер с листьями салата
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>160</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-a">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger2.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Бифбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>190</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-a">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger3.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Королевский чизбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>260</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-b">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger4.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Черный гамбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>199</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-b">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger5.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Чикен бургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>180</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-c">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger1.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Чизбургер с листьями салата
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>160</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-c">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger2.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Бифбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>190</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-c">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger3.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Королевский чизбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>260</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-d">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger4.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Черный гамбургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>199</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-          <li class="categories__card mix category-e">
-            <article class="card">
-              <a class="card__link-img" href="http://localhost:3000/product.html">
-                <img class="card__img" src="images/burger5.jpg" width="140" height="140"
-                  alt="Чизбургер с листьями салата">
-              </a>
-              <div class="card__content">
-                <a class="card__link-title" href="#">
-                  <h3 class="card__title">
-                    Чикен бургер
-                  </h3>
-                </a>
-                <div class="card__price">
-                  <span>180</span>
-                  руб.
-                </div>
-              </div>
-              <button class="card__btn btn" type="button">
-                В корзину
-              </button>
-            </article>
-          </li>
-
-        </ul>
-        <a class="categories__link" href="#">
-          Показать еще
-        </a>
-      </div>
-    </section>
-
-    <section class="services section" style="background-image: url('images/food-delivery.jpg')">
-      <div class="container">
-        <div class="services__info">
-          <h2 class="services__title title">
-            Оставайтесь дома,
-            <br>а мы позаботимся о еде
+      <section class="categories section" id="categories">
+        <div class="container">
+          <h2 class="categories__title title">
+            Популярные категории
           </h2>
-          <p class="services__text">
-            У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
-            получите скиидку!
-          </p>
-          <ul class="services__list">
-            <li class="services__item">
-              <svg class="services__icon">
-                <use fill="#FF6838" xlink:href="images/sprite.svg#time"></use>
-              </svg>
-              Быстрая доставка за 15 минут
+          <ul class="categories__filter">
+            <li class="categories__box">
+              <button class="categories__btn categories__btn--active btn" data-filter=".category-a" type="button">
+                <svg class="categories__icon">
+                  <use xlink:href="images/sprite.svg#burger"></use>
+                </svg>
+                Бургеры
+              </button>
             </li>
-            <li class="services__item">
-              <svg class="services__icon">
-                <use fill="#00AAFF" xlink:href="images/sprite.svg#courier"></use>
-              </svg>
-              Вежливые курьеры
+            <li class="categories__box">
+              <button class="categories__btn btn" data-filter=".category-b" type="button">
+                <svg class="categories__icon">
+                  <use xlink:href="images/sprite.svg#pizza"></use>
+                </svg>
+                Пицца
+              </button>
             </li>
-            <li class="services__item">
-              <svg class="services__icon">
-                <use fill="#FF2222" xlink:href="images/sprite.svg#shop"></use>
-              </svg>
-              Более 500 заведений
+            <li class="categories__box">
+              <button class="categories__btn btn" data-filter=".category-c" type="button">
+                <svg class="categories__icon">
+                  <use xlink:href="images/sprite.svg#sandwich"></use>
+                </svg>
+                Сендвичи
+              </button>
+            </li>
+            <li class="categories__box">
+              <button class="categories__btn btn" data-filter=".category-d" type="button">
+                <svg class="categories__icon">
+                  <use xlink:href="images/sprite.svg#asia"></use>
+                </svg>
+                Азиатская кухня
+              </button>
+            </li>
+            <li class="categories__box">
+              <button class="categories__btn btn" data-filter=".category-e" type="button">
+                <svg class="categories__icon">
+                  <use xlink:href="images/sprite.svg#dish"></use>
+                </svg>
+                Cеты
+              </button>
             </li>
           </ul>
-          <a class="services__link  btn" href="#">
-            Подробнее
+          <ul class="categories__box-card">
+            <li class="categories__card mix category-a">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger1.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Чизбургер с листьями салата
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>160</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-a">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger2.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Бифбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>190</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-a">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger3.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Королевский чизбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>260</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-b">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger4.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Черный гамбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>199</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-b">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger5.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Чикен бургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>180</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-c">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger1.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Чизбургер с листьями салата
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>160</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-c">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger2.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Бифбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>190</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-c">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger3.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Королевский чизбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>260</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-d">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger4.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Черный гамбургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>199</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+            <li class="categories__card mix category-e">
+              <article class="card">
+                <a class="card__link-img" href="http://localhost:3000/product.html">
+                  <img class="card__img" src="images/burger5.jpg" width="140" height="140"
+                    alt="Чизбургер с листьями салата">
+                </a>
+                <div class="card__content">
+                  <a class="card__link-title" href="#">
+                    <h3 class="card__title">
+                      Чикен бургер
+                    </h3>
+                  </a>
+                  <div class="card__price">
+                    <span>180</span>
+                    руб.
+                  </div>
+                </div>
+                <button class="card__btn btn" type="button">
+                  В корзину
+                </button>
+              </article>
+            </li>
+
+          </ul>
+          <a class="categories__link" href="#">
+            Показать еще
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="restaurants section">
-      <div class="container">
-        <h2 class="restaurants__title title">
-          Лучшие рестораны
-        </h2>
-        <ul class="restaurants__box-card">
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="#">
-                <img class="rest-card__img" src="images/blaze-pizza.jpg" width="370" height="300" alt="Blaze Pizza">
-              </a>
-              <a class="rest-card__link-title" href="#">
-                <h3 class="rest-card__title">
-                  Blaze Pizza
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  11:00 - 22:00
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+      <section class="services section">
+        <div class="container">
+          <div class="services__inner" style="background-image: url('images/food-delivery.png')" width="440"
+            height="585">
+            <div class="services__info">
+              <h2 class="services__title title">
+                Оставайтесь дома,
+                <br>а мы позаботимся о еде
+              </h2>
+              <p class="services__text">
+                У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас
+                и
+                получите скиидку!
+              </p>
+              <ul class="services__list">
+                <li class="services__item">
+                  <svg class="services__icon">
+                    <use fill="#FF6838" xlink:href="images/sprite.svg#time"></use>
                   </svg>
-                  <span class="sr-only"> ссылка перхода в Blaze Pizza</span>
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="#">
-                <img class="rest-card__img" src="images/pizza-runcho.jpg" width="370" height="300" alt="Pizza Runcho">
-              </a>
-              <a class="rest-card__link-title" href="#">
-                <h3 class="rest-card__title">
-                  Pizza Runcho
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  12:00 - 21:00
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  Быстрая доставка за 15 минут
+                </li>
+                <li class="services__item">
+                  <svg class="services__icon">
+                    <use fill="#00AAFF" xlink:href="images/sprite.svg#courier"></use>
                   </svg>
-                  <span class="sr-only"> ссылка перхода в Pizza Runcho</span>
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="#">
-                <img class="rest-card__img" src="images/pizza-hut.jpg" width="370" height="300" alt="Pizza Hut">
-              </a>
-              <a class="rest-card__link-title" href="#">
-                <h3 class="rest-card__title">
-                  Pizza Hut
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  11:00 - 22:00
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                  Вежливые курьеры
+                </li>
+                <li class="services__item">
+                  <svg class="services__icon">
+                    <use fill="#FF2222" xlink:href="images/sprite.svg#shop"></use>
                   </svg>
-                  <span class="sr-only"> ссылка перхода в Pizza Hut</span>
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="https://www.mcdonalds.com/ua/uk-ua.html">
-                <img class="rest-card__img" src="images/mcdonalds.jpg" width="370" height="300" alt="McDonald`s">
+                  Более 500 заведений
+                </li>
+              </ul>
+              <a class="services__link  btn" href="#">
+                Подробнее
               </a>
-              <a class="rest-card__link-title" href="https://www.mcdonalds.com/ua/uk-ua.html">
-                <h3 class="rest-card__title">
-                  McDonald`s
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  06:00 - 23:00
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
-                  </svg>
-                  <span class="sr-only"> ссылка перхода в McDonald`s</span>
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="#">
-                <img class="rest-card__img" src="images/kfc.jpg" width="370" height="300" alt="KFC">
-              </a>
-              <a class="rest-card__link-title" href="#">
-                <h3 class="rest-card__title">
-                  KFC
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  06:00 - 23:30
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
-                  </svg>
-                  <span class="sr-only"> ссылка перхода в KFC</span>
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="restaurants__card">
-            <article class="rest-card">
-              <a class="rest-card__link-img" href="#">
-                <img class="rest-card__img" src="images/star-burgers.jpg" width="370" height="300" alt="Star Burgers">
-              </a>
-              <a class="rest-card__link-title" href="#">
-                <h3 class="rest-card__title">
-                  Star Burgers
-                </h3>
-              </a>
-              <div class="rest-card__controls">
-                <svg class="rest-card__time">
-                  <use xlink:href="images/sprite.svg#time-rest"></use>
-                </svg>
-                <span class="rest-card__hours">
-                  09:00 - 21:00
-                </span>
-                <a class="rest-card__link btn" href="#">
-                  <svg class="rest-card__arrow">
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
-                  </svg>
-                  <span class="sr-only"> ссылка перхода в Star Burgers</span>
-                </a>
-              </div>
-            </article>
-          </li>
-        </ul>
+            </div>
+          </div>
 
-      </div>
-    </section>
-
-    <section class="reviews">
-      <div class="conatiner">
-        <h2 class="reviews__title title">
-          Отзывы клиентов
-        </h2>
-        <div class="reviews__slider">
-          <div class="reviews__item">
-            <div class="reviews__item-inner">
-              <img class="reviews__img" src="images/client1.jpg" width="300" height="300" alt="Фото клиента Дарьи">
-              <div class="reviews__content">
-                <blockquote class="reviews__blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
-                  доставку - однозначно рекомендую!
-                </blockquote>
-                <cite class="reviews__author">
-                  Дарья
-                </cite>
-                <span class="reviews__text">
-                  Ценитель вкусной еды
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__item-inner">
-              <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
-              <div class="reviews__content">
-                <blockquote class="reviews__blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                  приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                  однозначно
-                  рекомендую!
-                </blockquote>
-                <cite class="reviews__author">
-                  Дарья
-                </cite>
-                <span class="reviews__text">
-                  Ценитель вкусной еды
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__item-inner">
-              <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
-              <div class="reviews__content">
-                <blockquote class="reviews__blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
-                  доставку -однозначно рекомендую!
-                </blockquote>
-                <cite class="reviews__author">
-                  Дарья
-                </cite>
-                <span class="reviews__text">
-                  Ценитель вкусной еды
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__item-inner">
-              <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
-              <div class="reviews__content">
-                <blockquote class="reviews__blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                  приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                  однозначно
-                  рекомендую!
-                </blockquote>
-                <cite class="reviews__author">
-                  Дарья
-                </cite>
-                <span class="reviews__text">
-                  Ценитель вкусной еды
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="app section">
-      <div class="container">
-        <div class="app__inner">
-          <div class="app__info">
-            <h2 class="app__title title">
-              Скачайте мобильное приложение
-            </h2>
-            <p class="app__text">
-              Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
-              месте.
-            </p>
-            <a class="app__link" href="#">
-              <img class="app__icon" src="images/app-store.jpg" width="120" height="40" alt="Иконка App Store">
-
-            </a>
-            <a class="app__link" href="#">
-              <img class="app__icon" src="images/google-play.jpg" width="135" height="40" alt="Иконка Google Play">
-            </a>
-          </div>
-          <img class="app__img" src="images/app-img.jpg" width="570" height="380" alt=" Фото Тарелки с салатом">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__subscribe">
-          <a class="logo" href="#body">
-            <img class="logo__img" src="images/logo.svg" alt="логотип сайта">
-          </a>
-          <form class="footer__form">
-            <label class="footer__label">
-              <input class="footer__input" type="email" name="email" placeholder="Ваш email" required>
-            </label>
-            <button class="footer__btn btn" type="submit">
-              <svg class="footer__icon">
-                <use xlink:href="images/sprite.svg#subscribe"></use>
-              </svg>
-              Подписаться
-            </button>
-          </form>
-        </div>
-
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Как это работает
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Продукты
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Блюда
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Меню
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              О нас
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Новости
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Партнеры
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              ЧаВо
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Скачать приложение
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Блог
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Что нового?
-            </a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Карта сайта
-            </a>
-          </li>
-        </ul>
-
-        <address class="contacts" id="contacts">
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a class="contacts__link" target="_blank" href="https://g.page/rola_food_factory?share">
-                <svg class="contacts__icon">
-                  <use xlink:href="images/sprite.svg#location"></use>
-                </svg>
-                ул. Смирнова 2/3
-              </a>
+      <section class="restaurants section">
+        <div class="container">
+          <h2 class="restaurants__title title">
+            Лучшие рестораны
+          </h2>
+          <ul class="restaurants__box-card">
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/blaze-pizza.jpg" width="370" height="300" alt="Blaze Pizza">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Blaze Pizza
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    11:00 - 22:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Blaze Pizza</span>
+                  </a>
+                </div>
+              </article>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:79068057043">
-                <svg class="contacts__icon">
-                  <use xlink:href="images/sprite.svg#calling"></use>
-                </svg>
-                79068057043
-              </a>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/pizza-runcho.jpg" width="370" height="300" alt="Pizza Runcho">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Pizza Runcho
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    12:00 - 21:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Pizza Runcho</span>
+                  </a>
+                </div>
+              </article>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="mailto:support@sfood.com">
-                <svg class="contacts__icon">
-                  <use xlink:href="images/sprite.svg#message"></use>
-                </svg>
-                support@sfood.com
-              </a>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/pizza-hut.jpg" width="370" height="300" alt="Pizza Hut">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Pizza Hut
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    11:00 - 22:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Pizza Hut</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="https://www.mcdonalds.com/ua/uk-ua.html">
+                  <img class="rest-card__img" src="images/mcdonalds.jpg" width="370" height="300" alt="McDonald`s">
+                </a>
+                <a class="rest-card__link-title" href="https://www.mcdonalds.com/ua/uk-ua.html">
+                  <h3 class="rest-card__title">
+                    McDonald`s
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    06:00 - 23:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в McDonald`s</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/kfc.jpg" width="370" height="300" alt="KFC">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    KFC
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    06:00 - 23:30
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в KFC</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/star-burgers.jpg" width="370" height="300" alt="Star Burgers">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Star Burgers
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    09:00 - 21:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Star Burgers</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <ul class="restaurants__box-card-slider">
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/blaze-pizza.jpg" width="370" height="300" alt="Blaze Pizza">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Blaze Pizza
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    11:00 - 22:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Blaze Pizza</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/pizza-runcho.jpg" width="370" height="300" alt="Pizza Runcho">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Pizza Runcho
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    12:00 - 21:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Pizza Runcho</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/pizza-hut.jpg" width="370" height="300" alt="Pizza Hut">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Pizza Hut
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    11:00 - 22:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Pizza Hut</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="https://www.mcdonalds.com/ua/uk-ua.html">
+                  <img class="rest-card__img" src="images/mcdonalds.jpg" width="370" height="300" alt="McDonald`s">
+                </a>
+                <a class="rest-card__link-title" href="https://www.mcdonalds.com/ua/uk-ua.html">
+                  <h3 class="rest-card__title">
+                    McDonald`s
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    06:00 - 23:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в McDonald`s</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/kfc.jpg" width="370" height="300" alt="KFC">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    KFC
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    06:00 - 23:30
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в KFC</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="restaurants__card">
+              <article class="rest-card">
+                <a class="rest-card__link-img" href="#">
+                  <img class="rest-card__img" src="images/star-burgers.jpg" width="370" height="300" alt="Star Burgers">
+                </a>
+                <a class="rest-card__link-title" href="#">
+                  <h3 class="rest-card__title">
+                    Star Burgers
+                  </h3>
+                </a>
+                <div class="rest-card__controls">
+                  <svg class="rest-card__time">
+                    <use xlink:href="images/sprite.svg#time-rest"></use>
+                  </svg>
+                  <span class="rest-card__hours">
+                    09:00 - 21:00
+                  </span>
+                  <a class="rest-card__link btn" href="#">
+                    <svg class="rest-card__arrow">
+                      <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="sr-only"> ссылка перхода в Star Burgers</span>
+                  </a>
+                </div>
+              </article>
             </li>
           </ul>
 
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link" target="_blank" href="https://www.facebook.com/">
-                <svg class="social__icon">
-                  <use xlink:href="images/sprite.svg#facebook"></use>
-                </svg>
-                <span class="sr-only">Ссылка на фейсбук Simple Food</span>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="conatiner">
+          <h2 class="reviews__title title">
+            Отзывы клиентов
+          </h2>
+          <div class="reviews__slider">
+            <div class="reviews__item">
+              <div class="reviews__item-inner">
+                <img class="reviews__img" src="images/client1.jpg" width="300" height="300" alt="Фото клиента Дарьи">
+                <div class="reviews__content">
+                  <blockquote class="reviews__blockquote">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки
+                    на
+                    доставку - однозначно рекомендую!
+                  </blockquote>
+                  <cite class="reviews__author">
+                    Дарья
+                  </cite>
+                  <span class="reviews__text">
+                    Ценитель вкусной еды
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-inner">
+                <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
+                <div class="reviews__content">
+                  <blockquote class="reviews__blockquote">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio veniam quaerat accusamus, unde rerum
+                    quidem doloribus, recusandae iusto autem similique, voluptates fugit ipsum iure sunt saepe. Aliquid
+                    ut facilis voluptatum omnis, libero id explicabo dignissimos eligendi fugiat adipisci quam
+                    
+                  </blockquote>
+                  <cite class="reviews__author">
+                    Дарья
+                  </cite>
+                  <span class="reviews__text">
+                    Ценитель вкусной еды
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-inner">
+                <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
+                <div class="reviews__content">
+                  <blockquote class="reviews__blockquote">
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Переписали возвращайся страну рукопись заманивший предупредила буквенных первую маленькая, дал силуэт, рекламных она дорогу родного. Свой свою парадигматическая дорогу предложения.
+                  </blockquote>
+                  <cite class="reviews__author">
+                    Дарья
+                  </cite>
+                  <span class="reviews__text">
+                    Ценитель вкусной еды
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-inner">
+                <img class="reviews__img" src="images/client1.jpg" alt="Фото клиента Дарьи">
+                <div class="reviews__content">
+                  <blockquote class="reviews__blockquote">
+                    In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est.
+                    Suspendisse dignissim sed
+                    dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi
+                  </blockquote>
+                  <cite class="reviews__author">
+                    Дарья
+                  </cite>
+                  <span class="reviews__text">
+                    Ценитель вкусной еды
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="app section">
+        <div class="container">
+          <div class="app__inner">
+            <div class="app__info">
+              <h2 class="app__title title">
+                Скачайте мобильное приложение
+              </h2>
+              <p class="app__text">
+                Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом
+                удобном
+                месте.
+              </p>
+              <a class="app__link" href="#">
+                <img class="app__icon" src="images/app-store.jpg" width="120" height="40" alt="Иконка App Store">
+
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" target="_blank" href="https://twitter.com/">
-                <svg class="social__icon">
-                  <use xlink:href="images/sprite.svg#twitter"></use>
-                </svg>
-                <span class="sr-only">Ссылка на твиттер Simple Food</span>
+              <a class="app__link" href="#">
+                <img class="app__icon" src="images/google-play.jpg" width="135" height="40" alt="Иконка Google Play">
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" target="_blank" href="https://www.instagram.com/">
-                <svg class="social__icon">
-                  <use xlink:href="images/sprite.svg#instagram"></use>
+            </div>
+            <img class="app__img" src="images/app-img.jpg" width="570" height="380" alt=" Фото Тарелки с салатом">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__subscribe">
+            <a class="logo footer__logo" href="#body">
+              <img class="logo__img" src="images/logo.svg" alt="логотип сайта">
+            </a>
+            <form class="footer__form">
+              <label class="footer__label">
+                <input class="footer__input" type="email" name="email" placeholder="Ваш email" required>
+              </label>
+              <button class="footer__btn btn" type="submit">
+                <svg class="footer__icon">
+                  <use xlink:href="images/sprite.svg#subscribe"></use>
                 </svg>
-                <span class="sr-only">Ссылка на инстаграмм Simple Food</span>
-              </a>
-            </li>
-          </ul>
-        </address>
+                Подписаться
+              </button>
+            </form>
+          </div>
+          <div class="footer__inner-second">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Как это работает
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Продукты
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Блюда
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Меню
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Новости
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Партнеры
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  ЧаВо
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Скачать приложение
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Блог
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Что нового?
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Карта сайта
+                </a>
+              </li>
+            </ul>
+            <address class="contacts" id="contacts">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__link" target="_blank" href="https://g.page/rola_food_factory?share">
+                    <svg class="contacts__icon">
+                      <use xlink:href="images/sprite.svg#location"></use>
+                    </svg>
+                    ул. Смирнова 2/3
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:79068057043">
+                    <svg class="contacts__icon">
+                      <use xlink:href="images/sprite.svg#calling"></use>
+                    </svg>
+                    79068057043
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:support@sfood.com">
+                    <svg class="contacts__icon">
+                      <use xlink:href="images/sprite.svg#message"></use>
+                    </svg>
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="social">
+                <li class="social__item">
+                  <a class="social__link" target="_blank" href="https://www.facebook.com/">
+                    <svg class="social__icon">
+                      <use xlink:href="images/sprite.svg#facebook"></use>
+                    </svg>
+                    <span class="sr-only">Ссылка на фейсбук Simple Food</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" target="_blank" href="https://twitter.com/">
+                    <svg class="social__icon">
+                      <use xlink:href="images/sprite.svg#twitter"></use>
+                    </svg>
+                    <span class="sr-only">Ссылка на твиттер Simple Food</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" target="_blank" href="https://www.instagram.com/">
+                    <svg class="social__icon">
+                      <use xlink:href="images/sprite.svg#instagram"></use>
+                    </svg>
+                    <span class="sr-only">Ссылка на инстаграмм Simple Food</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copyright">© 2021 Simple Food</p>
-    </div>
-  </footer>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2021 Simple Food</p>
+      </div>
+    </footer>
+  </div>
+
 
 
 

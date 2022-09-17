@@ -1,26 +1,47 @@
 .interesting {
   position: relative;
+  @include sm(576) {
+    padding-bottom: 45px;
+  }
+  
   &__title {
     margin-bottom: 60px;
+    @include lg(992) {
+      margin-bottom: 40px;
+    }
+    @include md(768) {
+      margin-bottom: 30px;
+    }
   }
-  &__slider-list {
-    height: 315px;
+  &__slider {
+    
   }
   &__slider-item {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
-    padding: 7px 5px 0 5px;
-  }
-  &__slick-prev {
-    position: absolute;
-    top: -105px;
-    right: 62px;
+    padding: 8px 5px;
+    
   }
 
+  &__slick-prev,
   &__slick-next {
     position: absolute;
     top: -105px;
-    right: 2px;
+    @include lg(992) {
+      top: -74px;
+    }
+    @include md(768) {
+      top: -65px;
+    }
+  }
+
+  &__slick-prev {
+    right: 78px;
+  }
+  &__slick-next {
+    right: 14px;
+  }
+  &__slick-dots {
+    left: 50%;
+    top: 106%;
+    transform: translateX(-50%);
   }
 }

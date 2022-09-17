@@ -1,19 +1,18 @@
 .product {
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 612px;
-    width: 100%;
-    height: 1px;
-    background-color: #e4e4e4;
-  }
 
   &__body {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin-bottom: 85px;
+    @include xl(1200) {
+      justify-content: space-around;
+    }
+    @include lg(992) {
+      display: block;
+      margin: 0 auto;
+    }
   }
   &__slider {
     max-width: 610px;
@@ -21,18 +20,47 @@
     box-shadow: 0px 0px 0px 1px $silver;
     border-radius: 5px;
     padding: 75px 105px;
+    @include xl(1200) {
+      max-width: 480px;
+      max-height: 400px;
+      padding: 54px 95px;
+    }
+    @include lg(992) {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    @include sm(576) {
+      max-width: 345px;
+      max-height: 345px;
+      padding: 23px;
+    }
   }
   &__content {
     max-width: 45.5%;
+    @include lg(992) {
+      max-width: 60%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    @include md(768) {
+      max-width: 87%;
+    }
+    @include sm(576) {
+      max-width: 100%;
+    }
   }
   &__title {
     margin-bottom: 30px;
+    @include sm(576) {
+      margin-bottom: 15px;
+    }
   }
-
   &__star {
     margin-bottom: 24px;
+    @include sm(576) {
+      margin-bottom: 15px;
+    }
   }
-
   &__price {
     @extend %rubik-500;
     font-size: 25px;
@@ -42,9 +70,9 @@
   &__controls {
     display: flex;
     margin: 20px 0 30px 0;
-  }
-
-  &__number {
+    @include lg(992) {
+      display: block;
+    }
   }
   &__btn {
     font-size: 14px;
@@ -67,6 +95,10 @@
         stroke: $orange;
       }
     }
+    @include lg(992) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
   }
   &__icon-btn {
     width: 20px;
@@ -76,7 +108,6 @@
     transition: $transition;
     margin-right: 16px;
   }
-
   &__info-title {
     @extend %rubik-400;
     font-size: 24px;
@@ -86,12 +117,17 @@
     padding-bottom: 15px;
     margin-bottom: 20px;
     border-bottom: 1px solid #e4e4e4;
+    @include sm(576) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
   }
-
   &__info-list {
     margin-bottom: 20px;
+    @include sm(576) {
+      margin-bottom: 15px;
+    }
   }
-
   &__info-item {
     & span {
       font-size: 16px;
@@ -100,7 +136,6 @@
       color: #505050;
     }
   }
-
   &__info-link {
     @extend %h-f-a-link;
     font-size: 20px;
@@ -108,6 +143,26 @@
     color: $darkBlue;
     text-decoration: underline;
     transition: $transition;
+    @include sm(576) {
+      font-size: 16px;
+    }
+  }
+  &__tabs-wrapper {
+    border-top: 1px solid #e4e4e4;
+  }
+}
+
+.product-slide {
+  display: flex;
+  justify-content: center;
+  &__img {
+    @include xl(1200) {
+      max-width: 300px;
+      max-height: 300px;
+    }
+    @include sm(576) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -135,6 +190,9 @@
     background-color: $white;
     border-radius: 15px;
     position: relative;
+    @include lg(992) {
+    min-height: 80%;
+    }
   }
 
   &__content {
@@ -147,38 +205,67 @@
     position: absolute;
     top: 25px;
     right: 25px;
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border-radius: 5px;
+    background-color: #FFF2ED;
     transition: $transition;
-    &:hover {
-      background-color: $silver;
-    }
   }
 
   &__close-icon {
     width: 32px;
     height: 32px;
     fill: rgba(0, 0, 0, 0.15);
+    @include lg(922) {
+      width: 22px;
+    height: 22px;
+    }
   }
 
   &__slider {
-    padding-top: 60px;
-    width: 750px;
+    max-width: 750px;
+    @include md(768){
+      max-width: 550px;
+    }
+    @include sm(576) {
+      max-width: 355px;
+    }
+     @include lg-h(992) {
+      max-width: 355px;
+    }
+  }
+
+  &__slider-img {
+    @include lg(992) {
+      max-width: 600px;
+      max-height: 600px;
+      margin: 0 auto;
+    }
+    @include md(768) {
+      max-width: 500px;
+      max-height: 500px;
+    }
+     @include sm(576) {
+      max-width: 360px;
+      max-height: 360px;
+    }
+      @include lg-h(992) {
+      max-width: 360px;
+      max-height: 360px;
+    }
   }
 
   &__prev-btn,
   &__next-btn {
+    @extend %center;
     content: "";
     position: absolute;
     top: 50%;
-    left: -52%;
     transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border-radius: 5px;
     transition: $transition;
-    @extend %center;
     &:hover {
       background: rgba(255, 122, 80, 0.1);
       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
@@ -194,10 +281,18 @@
       background: $white;
       box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
     }
+    @include lg(992) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__prev-btn {
+    left: -6%;
   }
 
   &__next-btn {
-    left: 150%;
+    left: 104%;
   }
 
   &__icon {
@@ -206,28 +301,45 @@
     fill: #505050;
     transition: $transition;
   }
+  &__slick-dots {
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include lg-h(992) {
+      top: 88%;
+    }
+  }
 }
 
 .tabs {
   max-width: 690px;
   margin: 0 auto;
-
+  padding-top: 30px;
   &__list {
     display: flex;
+    margin-bottom: 30px;
+    @include md(768) {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 0 2px;
+    }
   }
-
   &__item {
+    &:not(:last-child) {
+      margin-right: 60px;
+      @include md(768) {
+        padding-bottom: 7px;
+      }
+      @include sm(576) {
+        margin-right: 25px;
+      }
+    }
+  }
+  &__link {
+    @extend %h-f-a-link;
     font-size: 24px;
     line-height: 1.5;
     color: $darkBlue;
-    margin-bottom: 30px;
-    &:not(:last-child) {
-      margin-right: 60px;
-    }
-  }
-
-  &__link {
-    @extend %h-f-a-link;
     transition: $transition;
     &--active {
       color: $orange;
@@ -240,6 +352,9 @@
       .product-tab__count {
         color: $orange;
       }
+    }
+    @include sm(576) {
+      font-size: 20px;
     }
   }
 
@@ -257,6 +372,9 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+    @include sm(576) {
+      font-size: 16px;
+    }
   }
 
   &__content-characteristic li {
@@ -270,6 +388,9 @@
     & span {
       @extend %rubik-400;
     }
+    @include sm(576) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -281,9 +402,15 @@
     color: $darkBlue;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
+    @include sm(576) {
+      font-size: 20px;
+    }
   }
   &__list {
     margin-bottom: 40px;
+    @include sm(576) {
+      margin-bottom: 45px;
+    }
   }
   &__item {
     &:not(:last-child) {
@@ -294,7 +421,18 @@
   &__header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
+     @include sm(576) {
+      display: block;
+    }
+  }
+  &__header-inner {
+    display: flex;
+    align-items: center;
+     @include sm(576) {
+      margin-bottom: 15px;
+    }
   }
   &__img {
     width: 70px;
@@ -314,12 +452,12 @@
     line-height: 1.2;
     color: #505050;
     margin-bottom: 10px;
+    @include sm(576) {
+      margin-bottom: 8px;
+    }
   }
   &__date {
     letter-spacing: 0.03em;
-  }
-  &__star {
-    margin-left: auto;
   }
 
   &__text {
@@ -327,6 +465,10 @@
     line-height: 1.5;
     color: #505050;
     padding-bottom: 20px;
+    @include sm(576) {
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
   }
 
   &__form-title {
@@ -336,6 +478,9 @@
     color: $darkBlue;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
+    @include sm(576) {
+      font-size: 20px;
+    }
   }
   &__form-rating {
     display: flex;
@@ -390,13 +535,21 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 18px;
+    @include md(768) {
+      display: block;
+    }
+    @include sm(576) {
+      margin-bottom: 30px;
+    }
   }
   &__form-textarea {
     min-width: 400px;
     min-height: 165px;
-    max-height: 400px;
     resize: vertical;
     outline: transparent;
+    @include sm(576) {
+      min-width: 100%;
+    }
   }
 
   &__btn {
@@ -413,7 +566,6 @@
     cursor: pointer;
     transition: $transition;
     &:hover {
-      color: $orange;
       .form-checkbox__checkbox {
         background-color: #faeded;
       }
@@ -445,8 +597,7 @@
       left: -35px;
       &:focus {
         border: 1px solid $orange;
-    }
+      }
     }
   }
 }
-

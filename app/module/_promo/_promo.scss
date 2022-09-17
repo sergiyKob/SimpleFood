@@ -1,14 +1,24 @@
 .promo {
+  @include sm(576) {
+    padding-bottom: 45px;
+  }
   &__titile {
     margin-bottom: 60px;
+      @include md(768) {
+        text-align: center;
+        margin-bottom: 30px;
+    }
   }
   &__items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include xl(1200) {
+      justify-content: space-around;
+    }
   }
   &__item {
-    width: 370px;
+    max-width: 370px;
     background-color: $white;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -17,10 +27,29 @@
     &:hover {
       transform: scale(1.05);
     }
+    @include md(768) {
+      display: none;
+    }
+
+  }
+
+  &__items-slider {
+    display: none;
+    @include md(768) {
+      display: block;
+      max-width: 347px;
+      margin: 0 auto;
+      position: relative;
+
+    }
   }
 
   &__text {
     font-size: 24px;
     padding: 15px 20px;
+  }
+
+  &__slick-dots {
+    left: 40%;
   }
 }

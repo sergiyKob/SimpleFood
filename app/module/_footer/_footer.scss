@@ -1,19 +1,73 @@
 .footer {
   &__inner {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 60px;
+
+    @include lg(992) {
+      flex-direction: column;
+    }
+
+    @include sm(576) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &__inner-second {
+    display: flex;
+
+    @include sm(576) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__subscribe {
     margin-right: 70px;
     margin-top: 2px;
     margin-left: -2px;
+
+    @include xl(1200) {
+      margin-right: 40px;
+    }
+
+    @include lg(992) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @include md(768) {
+      display: block;
+    }
+
+    @include sm(576) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    height: 39px;
+    margin-bottom: -5px;
   }
 
   &__form {
     margin-top: 29px;
     font-size: 14px;
-    margin-left: 4px;
+
+    @include lg(992) {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    @include md(768) {
+      display: block;
+      margin-top: 29px;
+    }
   }
 
   &__input {
@@ -23,6 +77,24 @@
     border-radius: 5px;
     margin-bottom: 12px;
     outline: transparent;
+
+    @include lg(992) {
+      margin-bottom: 0;
+      margin-right: 15px;
+      width: 300px;
+    }
+
+    @include md(768) {
+      margin-bottom: 12px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include sm(576) {
+      margin-bottom: 8px;
+      width: 58%;
+      text-align: left;
+    }
 
     &:focus {
       box-shadow: 0px 0px 0px 2px $orange;
@@ -43,6 +115,16 @@
     display: flex;
     align-items: center;
     padding: 13px 41px;
+
+    @include md(768) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include sm(576) {
+      width: 58%;
+      padding: 13px 20px;
+    }
 
     &:hover {
       .footer__icon {
@@ -74,11 +156,32 @@
     display: inline-block;
     column-count: 3;
     margin-right: 45px;
+
+    @include xl(1200) {
+      margin-right: 30px;
+      width: 100%;
+    }
+
+    @include lg(992) {
+      column-count: 2;
+    }
+
+      @include md(768) {
+      margin-right: 0;
+    }
+
+    @include sm(576) {
+      column-count: 1;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 17px;
+
+      @include lg(992) {
+        margin-bottom: 2px;
+      }
     }
   }
 
@@ -86,10 +189,19 @@
     @extend %h-f-a-link;
     letter-spacing: 0.01em;
     transition: $transition;
+
+    @include lg(992) {
+      display: block;
+      padding: 9px 0;
+    }
   }
 
   &__copyright {
     padding: 30px 0;
+
+    @include sm(576) {
+      padding: 20px 0;
+    }
   }
 
   &__bottom {
@@ -101,6 +213,10 @@
 }
 
 .contacts {
+  @include lg(992) {
+    margin-bottom: 20px;
+  }
+
   &__link {
     @extend %h-f-a-link;
     display: flex;
@@ -109,6 +225,11 @@
     line-height: 2;
     margin-bottom: 14px;
     transition: $transition;
+
+    @include lg(992) {
+      margin-bottom: 2px;
+      padding: 8px 0;
+    }
 
     &:hover {
       color: $orange;
@@ -142,7 +263,7 @@
     align-items: center;
     justify-content: center;
     background-color: $silver;
-    padding: 10px 10px;
+    padding: 12px 12px;
     border-radius: 50%;
     transition: $transition;
 

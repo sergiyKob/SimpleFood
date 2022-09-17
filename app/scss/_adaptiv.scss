@@ -1,0 +1,55 @@
+@mixin xxl($xxl) {
+  @media (max-width: #{$xxl}px) {
+    @content;
+  }
+}
+
+@mixin xl($xl) {
+  @media (max-width: #{$xl}px) {
+    @content;
+  }
+}
+
+@mixin lg($lg) {
+  @media (max-width: #{$lg}px) {
+    @content;
+  }
+}
+
+@mixin md($md) {
+  @media (max-width: #{$md}px) {
+    @content;
+  }
+}
+
+@mixin sm($sm) {
+  @media (max-width: #{$sm}px) {
+    @content;
+  }
+}
+
+//---------------Горизонтальний екран-----------------------//
+
+@mixin xl-h($xl) {
+  @media (max-width: #{$xl}px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin lg-h($lg) {
+  @media (max-width: #{$lg}px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin md-h($md) {
+  @media (max-width: #{$md}px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin sm-h($sm) {
+  @media (max-width: #{$sm}px) and (orientation: landscape) {
+    @content;
+  }
+}

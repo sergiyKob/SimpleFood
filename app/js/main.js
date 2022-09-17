@@ -1,6 +1,68 @@
 $(function () {
 
 
+//-----------------------------------------------------------------//
+
+  $('.product-slide__link').on('click', function () {
+    $('body').addClass('lock');
+  });
+
+  $('.popup__close').on('click', function () {
+    $('body').removeClass('lock');
+  });
+
+
+//---------------------------------------------------------------------//
+
+  $('.select-style, .product__number').styler();
+
+  //-----------------------------------------------------------------------//
+
+  $('.filters-mobile').on('click', function () {
+    $('.filter, .menu').addClass('active');
+    $('body').addClass('lock');
+  });
+
+  $('.filter__close-btn').on('click', function () {
+    $('.filter, .menu').removeClass('active');
+    $('body').removeClass('lock');
+  });
+
+
+
+  //-------------Слайдер restaurants при екрані менше 576рх------------------------//
+
+  $('.restaurants__box-card-slider').slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    dotsClass: 'class= slick-dots restaurants__slick-dots'
+  });
+
+  //-----------------------------------------------------------------------------//
+
+
+  $('.promo__items-slider').slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    dotsClass: 'class= slick-dots promo__slick-dots'
+  });
+
+
+
+//--------------------------burger menu------------------------------//
+
+
+  $('.burger').on('click', function () {
+    $('.burger, .menu, .menu__list, .burger-close').addClass('active');
+    $('body').addClass('lock');
+  });
+
+  $('.menu__list a, .burger-close').on('click', function () {
+    $('.burger, .menu, .menu__list, .burger-close').removeClass('active');
+    $('body').removeClass('lock');
+  }); 
 
 
 //-------------fixed header---------------------------------------------//
@@ -23,10 +85,43 @@ $(function () {
 
     nextArrow: '<button type="button" class="slick-btn interesting__slick-next"><svg class="slick-btn__arrow "><use xlink: href = "images/sprite.svg#right-slider"></use></svg ></button>',
     // fade: true,
-    
+    dotsClass: 'class= slick-dots interesting__slick-dots',
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+          arrows: false
+        }
+      }
+    ]
   });
 
-//----------------------------------------------------------------------//
+//---------------------------Tabs-------------------------------------------//
 
   $('.tabs__link').on('click', function (e) {
     e.preventDefault();
@@ -46,7 +141,7 @@ $(function () {
 
     nextArrow: '<button type="button" class="popup__next-btn"><svg class="popup__icon "><use xlink: href = "images/sprite.svg#icon-next"></use></svg ></button>',
 
-    dotsClass: 'class=" slick-dots popup__slick-dots',
+    dotsClass: 'class= slick-dots popup__slick-dots',
 
     // fade: true,
     dots: true,
@@ -73,7 +168,7 @@ $(function () {
 
 //----------------------------------------------------------------------//
 
-  $('.select-style, .product__number').styler();
+
 
 //----------------------------------------------------------------------//
 
@@ -91,7 +186,11 @@ $(function () {
 
     nextArrow: '<button type="button" class="slick-btn slick-next"><svg class="slick-btn__arrow "><use xlink: href = "images/sprite.svg#right-slider"></use></svg ></button>',
     dots: true,
+    fade: true,
+    dotsClass: 'class= slick-dots reviews__slick-dots'
+    
   });
+
 
 //----------------------------------------------------------------------//
 
@@ -165,7 +264,7 @@ $inputTo.on("input", function () {
   
 //--------------------------------------------------------------------//
 
- 
+
 
 
 
